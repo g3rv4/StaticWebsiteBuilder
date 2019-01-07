@@ -27,3 +27,4 @@ if($LASTEXITCODE){
 }
 
 mv "$srcPath/_site" .
+cp -r "$srcPath/_data" .
