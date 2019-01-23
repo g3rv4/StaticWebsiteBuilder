@@ -28,3 +28,6 @@ if($LASTEXITCODE){
 
 mv "$srcPath/_site" .
 cp -r "$srcPath/_data" .
+cd _site
+$project = $args[0]
+zip -r "../$($project)-$($version).zip" *

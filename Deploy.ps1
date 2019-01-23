@@ -4,7 +4,9 @@ $folder = Join-Path '/var/docker-deploy/nginx/volumes/html' (Get-ChildItem Env:D
 
 rm -rf $folder
 
-mv content $folder
+ls
+$file = $args[0]
+unzip "content/$($file)" -d $folder
 
 # Clear the cache
 $cfEmail = (Get-ChildItem Env:CF_EMAIL).Value
