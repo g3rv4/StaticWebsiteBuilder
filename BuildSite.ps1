@@ -1,6 +1,7 @@
 Set-PSDebug -Trace 1
 
 cd src
+git lfs pull
 
 # version everything
 $tcVersion = (Get-ChildItem Env:BUILD_NUMBER).Value
